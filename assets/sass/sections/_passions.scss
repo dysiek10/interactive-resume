@@ -1,0 +1,14 @@
+.passions {
+    margin: 100px 0;
+
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // margin: 0 -15px;
+    }
+
+    .photo {
+        width: 20%;
+        padding: 0 15px;    }
+}

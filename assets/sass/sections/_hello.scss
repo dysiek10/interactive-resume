@@ -1,0 +1,18 @@
+.hello {
+    margin: 100px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .description {
+        padding: 0 15px;
+        max-width: 60%;
+        font-size: $markedTextSize;
+
+
+        .my-photo {
+            width: 150px;
+            margin: 0 0 28px 0;
+        }
+    }
+}
