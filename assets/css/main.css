@@ -271,7 +271,7 @@ summary {
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -340,10 +340,12 @@ a {
   margin: 30px 20px 20px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-size: 12px;
 }
 
 .link:hover {
   background-color: #66806A;
+  color: #fff;
 }
 
 .home {
@@ -413,7 +415,7 @@ a {
 
 .projects .backgroud .row .image a:hover::after {
   right: 0;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 .projects .backgroud .row .image a:hover img {
@@ -461,10 +463,15 @@ a {
 .experience .timeline-wraper .timeline .item:hover .year {
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
+  color: #66806A;
 }
 
 .experience .timeline-wraper .timeline .item:hover .circle::after {
   background-color: #66806A;
+}
+
+.experience .timeline-wraper .timeline .item:hover .info {
+  color: #66806A;
 }
 
 .experience .timeline-wraper .timeline .item .year {
@@ -551,6 +558,14 @@ a {
 }
 
 .passions .photo {
+  display: block;
   width: 20%;
   padding: 0 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.passions .photo:hover {
+  -webkit-transform: scale(140%);
+          transform: scale(140%);
 }

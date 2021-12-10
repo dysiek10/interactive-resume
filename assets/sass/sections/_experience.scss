@@ -25,12 +25,18 @@
                 // }
 
                 &:hover {
+
                     .year {
                         transform: translateX(-10px);
+                        color: $headerColor;
                     }
 
                     .circle::after {
                         background-color: $headerColor;
+                    }
+
+                    .info {
+                        color: $headerColor;
                     }
                 }
 
@@ -39,15 +45,8 @@
                     font-size: 20px;
                     transition: 0.3s;
                     width: 10%;
-                    // tu musiałam zdefinować szerokość, bo daty 
-                    // mają różne szerokości i margin od .info
-                    // nie działał
                 }
 
-                // wcześniej miałam before i after na .year jako kółko, 
-                // ale nie działał mi wtedy hover tego kółka w środku
-                // zapisany miałam tak samo jak powyżej 
-                // &:hover .year(tam circle)::after
                 .circle {
                     position: relative;
 
