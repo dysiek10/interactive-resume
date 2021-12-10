@@ -61,10 +61,10 @@ a {
 }
 
 .link {
+    display: inline-block;
     padding: 10px 20px;
-    border: 2px solid $headerColor;
+    border: 1px solid $headerColor;
     border-radius: 30px;
-    margin: 30px 20px 20px 0;
     transition: 0.4s;
     font-size: $smallNotes;
 }

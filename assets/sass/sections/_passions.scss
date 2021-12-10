@@ -5,18 +5,44 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        // margin: 0 -15px;
-        // overflow: hidden;
+        margin: 0 -15px;
     }
 
     .photo {
-        display: block;
         width: 20%;
         padding: 0 15px;
+        position: relative;
         transition: 0.4s;
 
-        &:hover {
-            transform: scale(140%);
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                background-color: $headerColor;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
+            }
+
+            &:hover::after {
+                transform: translateY(100%);
+            }
+
+
         }
     }
 }
