@@ -1,6 +1,30 @@
 .home {
-    height: 60vh;
+    height: 50vh;
     background-color: #D3E4CD;
-    padding: 130px 0 0 0;
-    margin: 0 0 100px 0;
+    padding: 100px 0 0 0;
+    padding: 0 0 100px 0;
+    position: relative;
+
+    .container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: absolute;
+        bottom: -60px;
+
+        .introduction {
+            width: 50%;
+
+            p {
+                font-size: 22px;
+                padding: 0 0 0 10px;
+            }
+        }
+
+        .my-photo {
+            display: block;
+            width: 25%;
+            margin: 0 0 20px 0;
+        }
+    }
 }

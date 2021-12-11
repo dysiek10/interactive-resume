@@ -297,7 +297,8 @@ h6 {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 150px;
+  margin: 0 0 25px 0;
 }
 
 h2 {
@@ -349,14 +350,44 @@ a {
 }
 
 .home {
-  height: 60vh;
+  height: 50vh;
   background-color: #D3E4CD;
-  padding: 130px 0 0 0;
-  margin: 0 0 100px 0;
+  padding: 100px 0 0 0;
+  padding: 0 0 100px 0;
+  position: relative;
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -60px;
+}
+
+.home .container .introduction {
+  width: 50%;
+}
+
+.home .container .introduction p {
+  font-size: 22px;
+  padding: 0 0 0 10px;
+}
+
+.home .container .my-photo {
+  display: block;
+  width: 25%;
+  margin: 0 0 20px 0;
 }
 
 .hello {
-  margin: 100px 0;
+  padding: 200px 0 100px 0;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,18 +398,13 @@ a {
 }
 
 .hello .description {
-  padding: 0 15px;
   max-width: 60%;
   font-size: 20px;
 }
 
-.hello .description .my-photo {
-  width: 150px;
-  margin: 0 0 28px 0;
-}
-
 .projects {
-  margin: 100px -15px 0 -15px;
+  padding: 100px 0;
+  margin: 0 -15px;
 }
 
 .projects .backgroud {
