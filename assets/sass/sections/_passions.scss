@@ -1,5 +1,13 @@
 .passions {
-    margin: 100px 0;
+    padding: $sectionPaddingL;
+
+    @media (max-width: $laptopWidth) {
+        padding: $sectionPaddingM;
+    }
+
+    @media (max-width: $singleColWidth) {
+        padding: $sectionPaddingS;
+    }
 
     .photos {
         display: flex;

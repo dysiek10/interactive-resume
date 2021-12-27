@@ -296,20 +296,15 @@ h6 {
   line-height: 1;
 }
 
-h1 {
-  font-size: 150px;
-  margin: 0 0 25px 0;
-}
-
 h2 {
-  font-size: 54px;
-  margin: 0 0 54px 0;
+  font-size: 50px;
+  margin: 0 0 50px 0;
   text-align: center;
 }
 
 h3 {
-  font-size: 28px;
-  margin: 0 0 28px 0;
+  font-size: 25px;
+  margin: 0 0 25px 0;
 }
 
 p {
@@ -334,6 +329,12 @@ a {
   padding: 0 15px;
 }
 
+@media (max-width: 800px) {
+  .col {
+    width: 100%;
+  }
+}
+
 .link {
   display: inline-block;
   padding: 10px 20px;
@@ -352,27 +353,61 @@ a {
 .home {
   height: 50vh;
   background-color: #D3E4CD;
-  padding: 100px 0 0 0;
-  padding: 0 0 100px 0;
   position: relative;
+}
+
+@media (max-width: 1600px) {
+  .home {
+    height: 45vh;
+  }
 }
 
 .home .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: absolute;
   bottom: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .home .container .introduction {
   width: 50%;
+}
+
+@media (max-width: 800px) {
+  .home .container .introduction {
+    width: 100%;
+  }
+}
+
+.home .container .introduction h1 {
+  margin: 0 0 25px 0;
+}
+
+.home .container .introduction h1 {
+  font-size: 80px;
+}
+
+@media screen and (min-width: 320px) {
+  .home .container .introduction h1 {
+    font-size: calc(80px + 70 * ((100vw - 320px) / 1280));
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .home .container .introduction h1 {
+    font-size: 150px;
+  }
 }
 
 .home .container .introduction p {
@@ -386,6 +421,12 @@ a {
   margin: 0 0 20px 0;
 }
 
+@media (max-width: 800px) {
+  .home .container .my-photo {
+    width: 50%;
+  }
+}
+
 .hello {
   padding: 200px 0 100px 0;
   text-align: center;
@@ -397,18 +438,73 @@ a {
           justify-content: center;
 }
 
+@media (max-width: 1600px) {
+  .hello {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .hello {
+    padding: 60px 0;
+  }
+}
+
 .hello .description {
   max-width: 60%;
   font-size: 20px;
 }
 
+@media (max-width: 1600px) {
+  .hello .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hello .description {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hello .description {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
 .projects {
   padding: 100px 0;
-  margin: 0 -15px;
+}
+
+@media (max-width: 1600px) {
+  .projects {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects {
+    padding: 60px 0;
+  }
+}
+
+.projects .container {
+  padding: 0;
 }
 
 .projects .backgroud {
   background-color: #D3E4CD;
+}
+
+@media (max-width: 800px) {
+  .projects .backgroud .row.reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .projects .backgroud .row .image {
@@ -450,26 +546,63 @@ a {
 }
 
 .projects .backgroud .row .description {
-  padding-top: 28px;
+  padding: 25px 15px;
 }
 
 .skills {
-  margin: 100px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 1600px) {
+  .skills {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills {
+    padding: 60px 0;
+  }
 }
 
 .experience {
-  margin: 100px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 1600px) {
+  .experience {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .experience {
+    padding: 60px 0;
+  }
 }
 
 .experience .timeline-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .experience .timeline-wraper .timeline {
   width: 50%;
   padding: 0 15px;
+}
+
+@media (max-width: 800px) {
+  .experience .timeline-wraper .timeline {
+    width: 100%;
+  }
+}
+
+.experience .timeline-wraper .timeline h3 {
+  text-align: center;
+  padding-left: 18px;
 }
 
 .experience .timeline-wraper .timeline .item {
@@ -480,8 +613,8 @@ a {
 }
 
 .experience .timeline-wraper .timeline .item:hover .year {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
   color: #66806A;
 }
 
@@ -562,7 +695,19 @@ a {
 }
 
 .passions {
-  margin: 100px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 1600px) {
+  .passions {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .passions {
+    padding: 60px 0;
+  }
 }
 
 .passions .photos {

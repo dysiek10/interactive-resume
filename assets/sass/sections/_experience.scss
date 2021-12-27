@@ -1,16 +1,30 @@
 .experience {
-    margin: 100px 0;
+    padding: $sectionPaddingL;
+
+    @media (max-width: $laptopWidth) {
+        padding: $sectionPaddingM;
+    }
+
+    @media (max-width: $singleColWidth) {
+        padding: $sectionPaddingS;
+    }
 
     .timeline-wraper {
         display: flex;
+        flex-wrap: wrap;
 
         .timeline {
             width: 50%;
             padding: 0 15px;
 
-            // @media (max-width: 900px) {
-            //     width: 100%;
-            // }
+            @media (max-width: $singleColWidth) {
+                width: 100%;
+            }
+
+            h3 {
+                text-align: center;
+                padding-left: 18px;
+            }
 
             .item {
                 display: flex;
@@ -27,7 +41,7 @@
                 &:hover {
 
                     .year {
-                        transform: translateX(-10px);
+                        transform: translateX(-15px);
                         color: $headerColor;
                     }
 

@@ -11,11 +11,16 @@ $basicTextSize: 15px;
 $markedTextSize: 20px;
 $smallNotes: 12px;
 
+$sectionPaddingL: 100px 0;
+$sectionPaddingM: 80px 0;
+$sectionPaddingS: 60px 0;
 
-// // MEDIA QUERIES
 
-// $hideMenuWidth: 1500px;
-// $servColWidth: 1200px;
+
+// MEDIA QUERIES
+
+$laptopWidth: 1600px;
+$singleColWidth: 800px;
 // $homeColWidth: 1010px;
 // $portfColWidth: 900px;
 // $menuUpWidth: 800px;

@@ -1,11 +1,28 @@
 .projects {
-    padding: 100px 0;
-    margin: 0 -15px;
+    padding: $sectionPaddingL;
+
+    @media (max-width: $laptopWidth) {
+        padding: $sectionPaddingM;
+    }
+
+    @media (max-width: $singleColWidth) {
+        padding: $sectionPaddingS;
+    }
+
+    .container {
+        padding: 0;
+    }
 
     .backgroud {
         background-color: #D3E4CD;
 
         .row {
+
+            &.reverse {
+                @media (max-width: $singleColWidth) {
+                    flex-direction: column-reverse;
+                }
+            }
 
             .image {
                 padding: 0;
@@ -43,7 +60,7 @@
             }
 
             .description {
-                padding-top: 28px;
+                padding: 25px 15px;
             }
         }
     }
