@@ -3,10 +3,6 @@
     background-color: #D3E4CD;
     position: relative;
 
-    @media (max-width: $laptopWidth) {
-        height: 45vh;
-    }
-
     .container {
         display: flex;
         flex-wrap: wrap;

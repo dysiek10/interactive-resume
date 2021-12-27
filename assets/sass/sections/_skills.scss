@@ -1,11 +1,50 @@
 .skills {
     padding: $sectionPaddingL;
+    padding-bottom: 85px;
 
     @media (max-width: $laptopWidth) {
         padding: $sectionPaddingM;
+        padding-bottom: 65px;
     }
 
     @media (max-width: $singleColWidth) {
         padding: $sectionPaddingS;
+        padding-bottom: 45px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .tools {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -15px 0 0;
+
+        .tool {
+            width: 75px;
+            height: 75px;
+            margin: 0 15px 15px 0;
+            padding: 25px 0;
+            border-radius: 50%;
+            border: 3px solid $headerColor;
+            transition: 0.5s;
+
+            &:hover {
+                transform: scale(120%);
+                background-color: $headerColor;
+
+                .name {
+                    color: #fff;
+                }
+            }
+
+            .name {
+                text-align: center;
+                transition: 0.5s;
+            }
+
+        }
     }
 }

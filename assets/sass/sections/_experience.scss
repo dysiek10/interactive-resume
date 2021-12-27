@@ -7,36 +7,48 @@
 
     @media (max-width: $singleColWidth) {
         padding: $sectionPaddingS;
+        padding-top: 0;
     }
 
-    .timeline-wraper {
-        display: flex;
-        flex-wrap: wrap;
+    .container {
+        padding: 0 0 0 15px;
 
-        .timeline {
-            width: 50%;
-            padding: 0 15px;
+        .timeline-wraper {
+            display: flex;
+            flex-wrap: wrap;
 
             @media (max-width: $singleColWidth) {
-                width: 100%;
+                flex-direction: column-reverse;
             }
 
-            h3 {
-                text-align: center;
-                padding-left: 18px;
+            .timeline {
+
+                h3 {
+                    margin-left: -15px;
+
+                    @media (max-width: $singleColWidth) {
+                        margin: 60px 0 25px -15px;
+                    }
+                }
+            }
+
+
+            .timeline {
+                width: 50%;
+                padding: 0 15px;
+
+                @media (max-width: $singleColWidth) {
+                    width: 100%;
+                }
             }
 
             .item {
                 display: flex;
                 margin: 0 0 50px 0;
 
-                // @media (max-width: 1000px) {
-                //     margin: 0 15% 50px 15%;
-                // }
-
-                // @media (max-width: 700px) {
-                //     margin: 0 0 50px 0;
-                // }
+                @media (max-width: $phoneWidth) {
+                    margin: 0 0 30px 0;
+                }
 
                 &:hover {
 
@@ -54,9 +66,13 @@
                     }
                 }
 
+                &:last-child {
+                    margin: 0;
+                }
+
                 .year {
                     font-weight: 700;
-                    font-size: 20px;
+                    font-size: $markedTextSize;
                     transition: 0.3s;
                     width: 10%;
                 }
@@ -95,14 +111,24 @@
                     position: relative;
                     transition: 0.3s;
 
+                    @media (max-width: $phoneWidth) {
+                        margin: 0 0 0 100px;
+                    }
+
                     &::before {
                         position: absolute;
                         left: -73px;
-                        top: 42px;
+                        top: 35px;
                         content: '';
                         width: 3px;
-                        height: calc(100% - 15px);
+                        height: 100%;
                         background-color: $headerColor;
+
+                        @media (max-width: $phoneWidth) {
+                            left: -43px;
+                            height: calc(100% - 17px);
+
+                        }
                     }
 
                     .period {
@@ -124,8 +150,12 @@
             .mark {
                 color: $headerColor;
                 font-size: $markedTextSize;
+
+                @media (max-width: $phoneWidth) {
+                    font-size: $basicTextSize;
+
+                }
             }
         }
     }
-
 }

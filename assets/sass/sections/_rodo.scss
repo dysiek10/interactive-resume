@@ -1,0 +1,14 @@
+.rodo {
+    padding: 30px 0;
+    background-color: $headerColor;
+    // color: $mainTextColor;
+
+    .container {
+
+        p {
+            font-size: $smallNotes;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
