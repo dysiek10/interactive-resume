@@ -1,17 +1,13 @@
 .hello {
   margin: 100px 0;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .hello .description {
   padding: 0 15px;
-  max-width: 60%;
+  max-width: 80%;
 }
 
 .hello .description .my-photo {

@@ -1,8 +1,6 @@
 .hello {
     padding: 200px 0 100px 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    // text-align: center;
 
     @media (max-width: $laptopWidth) {
         padding: $sectionPaddingM;
@@ -12,25 +10,31 @@
         padding: $sectionPaddingS;
     }
 
-    .description {
-        max-width: 60%;
-        font-size: $markedTextSize;
+    .container {
+        padding: 0;
+        display: flex;
+        justify-content: end;
 
-        @media (max-width: $laptopWidth) {
-            font-size: 18px;
-        }
+        .description {
+            width: 70%;
+            font-size: $markedTextSize;
 
-        @media (max-width: $singleColWidth) {
-            max-width: 70%;
-        }
+            @media (max-width: $laptopWidth) {
+                font-size: 18px;
+            }
 
-        @media (max-width: 500px) {
-            max-width: 100%;
-            font-size: 16px;
-        }
+            @media (max-width: $singleColWidth) {
+                max-width: 70%;
+            }
 
-        &:last-child {
-            margin: 0;
+            @media (max-width: 500px) {
+                max-width: 100%;
+                font-size: 16px;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
         }
     }
 }

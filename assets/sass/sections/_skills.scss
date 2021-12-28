@@ -13,7 +13,7 @@
     }
 
     h3 {
-        text-align: center;
+        // text-align: center;
     }
 
     .tools {
@@ -21,6 +21,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0 -15px 0 0;
+
+        @media (max-width: 925px) {
+            justify-content: center;
+        }
 
         .tool {
             width: 86px;

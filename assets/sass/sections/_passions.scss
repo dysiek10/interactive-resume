@@ -21,7 +21,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        // margin: 0 -15px;
     }
 
     .photo {
@@ -39,11 +38,12 @@
         }
 
         img {
-            display: block;
+            display: inline-block;
             width: 100%;
             height: 100%;
         }
 
+        // co to za kreski...
         .cover {
             position: absolute;
             top: 0;
@@ -66,8 +66,6 @@
             &:hover::after {
                 transform: translateY(100%);
             }
-
-
         }
     }
 }

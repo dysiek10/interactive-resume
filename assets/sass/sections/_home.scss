@@ -1,44 +1,56 @@
 .home {
     height: 50vh;
     background-color: #D3E4CD;
-    position: relative;
+    // position: relative;
 
     .container {
+        position: relative;
+        height: 100%;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        bottom: -60px;
-        left: 50%;
-        // czemu zmniejsza container powyżej 35%?
-        transform: translateX(-50%);
+        justify-content: flex-end;
+        // position: absolute;
+        // bottom: -60px;
+        // // jak to obniżyć, żeby flex się nie pieprzył...
+        // // czemu zmniejsza container powyżej 35%?
+        // left: 50%;
+        // transform: translateX(-50%);
 
-        .introduction {
-            width: 50%;
+        .wraper {
+            padding: 0 15px;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            position: absolute;
+            bottom: -60px;
 
-            @media (max-width: $singleColWidth) {
-                width: 100%;
-            }
-
-            h1 {
-                @include fluid-type(320px, 1600px, 80px, 150px);
-                margin: 0 0 25px 0;
-            }
-
-            p {
-                font-size: 22px;
-                padding: 0 0 0 10px;
-            }
-        }
-
-        .my-photo {
-            display: block;
-            width: 25%;
-            margin: 0 0 20px 0;
-
-            @media (max-width: $singleColWidth) {
+            .introduction {
                 width: 50%;
+
+                @media (max-width: $singleColWidth) {
+                    width: 100%;
+                }
+
+                h1 {
+                    @include fluid-type(320px, 1600px, 80px, 150px);
+                    margin: 0 0 25px 0;
+                }
+
+                p {
+                    font-size: 22px;
+                    padding: 0 0 0 10px;
+                }
+            }
+
+            .my-photo {
+                display: block;
+                width: 35%;
+                margin: 0 0 20px 0;
+
+                @media (max-width: $singleColWidth) {
+                    width: 50%;
+                }
             }
         }
     }

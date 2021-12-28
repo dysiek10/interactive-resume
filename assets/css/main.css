@@ -299,7 +299,6 @@ h6 {
 h2 {
   font-size: 50px;
   margin: 0 0 50px 0;
-  text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -424,83 +423,86 @@ a {
 .home {
   height: 50vh;
   background-color: #D3E4CD;
-  position: relative;
 }
 
 .home .container {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home .container .wraper {
+  padding: 0 15px;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   bottom: -60px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-.home .container .introduction {
+.home .container .wraper .introduction {
   width: 50%;
 }
 
 @media (max-width: 800px) {
-  .home .container .introduction {
+  .home .container .wraper .introduction {
     width: 100%;
   }
 }
 
-.home .container .introduction h1 {
+.home .container .wraper .introduction h1 {
   margin: 0 0 25px 0;
 }
 
-.home .container .introduction h1 {
+.home .container .wraper .introduction h1 {
   font-size: 80px;
 }
 
 @media screen and (min-width: 320px) {
-  .home .container .introduction h1 {
+  .home .container .wraper .introduction h1 {
     font-size: calc(80px + 70 * ((100vw - 320px) / 1280));
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .home .container .introduction h1 {
+  .home .container .wraper .introduction h1 {
     font-size: 150px;
   }
 }
 
-.home .container .introduction p {
+.home .container .wraper .introduction p {
   font-size: 22px;
   padding: 0 0 0 10px;
 }
 
-.home .container .my-photo {
+.home .container .wraper .my-photo {
   display: block;
-  width: 25%;
+  width: 35%;
   margin: 0 0 20px 0;
 }
 
 @media (max-width: 800px) {
-  .home .container .my-photo {
+  .home .container .wraper .my-photo {
     width: 50%;
   }
 }
 
 .hello {
   padding: 200px 0 100px 0;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media (max-width: 1600px) {
@@ -515,36 +517,47 @@ a {
   }
 }
 
-.hello .description {
-  max-width: 60%;
+.hello .container {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.hello .container .description {
+  width: 70%;
   font-size: 20px;
 }
 
 @media (max-width: 1600px) {
-  .hello .description {
+  .hello .container .description {
     font-size: 18px;
   }
 }
 
 @media (max-width: 800px) {
-  .hello .description {
+  .hello .container .description {
     max-width: 70%;
   }
 }
 
 @media (max-width: 500px) {
-  .hello .description {
+  .hello .container .description {
     max-width: 100%;
     font-size: 16px;
   }
 }
 
-.hello .description:last-child {
+.hello .container .description:last-child {
   margin: 0;
 }
 
 .projects {
   padding: 100px 0;
+  background-color: #efefef;
 }
 
 @media (max-width: 1600px) {
@@ -559,26 +572,17 @@ a {
   }
 }
 
-.projects h2 {
-  padding: 0 15px;
-}
-
-.projects .backgroud {
-  background-color: #efefef;
-  padding: 60px 0;
-}
-
 @media (max-width: 800px) {
-  .projects .backgroud {
+  .projects {
     padding: 25px 0 0 0;
   }
 }
 
-.projects .backgroud .row .image {
+.projects .row .image {
   padding: 0;
 }
 
-.projects .backgroud .row .image a {
+.projects .row .image a {
   display: block;
   overflow: hidden;
   position: relative;
@@ -586,7 +590,7 @@ a {
   transition: 0.4s;
 }
 
-.projects .backgroud .row .image a::before {
+.projects .row .image a::before {
   content: "see on GitHub";
   border-radius: 20px;
   text-align: center;
@@ -602,12 +606,12 @@ a {
   transition: 0.4s;
 }
 
-.projects .backgroud .row .image a:hover::before {
+.projects .row .image a:hover::before {
   left: 0;
   border-radius: 20px;
 }
 
-.projects .backgroud .row .image img {
+.projects .row .image img {
   display: block;
   width: 100%;
   -webkit-transition: 0.4s;
@@ -616,18 +620,18 @@ a {
   overflow: hidden;
 }
 
-.projects .backgroud .row .description {
+.projects .row .description {
   padding: 25px 15px;
 }
 
 @media (max-width: 800px) {
-  .projects .backgroud .row .description {
+  .projects .row .description {
     padding: 25px 0px;
   }
 }
 
 @media (max-width: 800px) {
-  .projects .backgroud .row.reverse {
+  .projects .row.reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -635,7 +639,7 @@ a {
   }
 }
 
-.projects .backgroud .row.reverse .image a {
+.projects .row.reverse .image a {
   display: block;
   overflow: hidden;
   position: relative;
@@ -643,7 +647,7 @@ a {
   transition: 0.4s;
 }
 
-.projects .backgroud .row.reverse .image a::before {
+.projects .row.reverse .image a::before {
   content: "see on GitHub";
   border-radius: 20px;
   text-align: center;
@@ -659,7 +663,7 @@ a {
   transition: 0.4s;
 }
 
-.projects .backgroud .row.reverse .image a:hover::before {
+.projects .row.reverse .image a:hover::before {
   right: 0;
   border-radius: 20px;
 }
@@ -683,10 +687,6 @@ a {
   }
 }
 
-.skills h3 {
-  text-align: center;
-}
-
 .skills .tools {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,6 +697,14 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 -15px 0 0;
+}
+
+@media (max-width: 925px) {
+  .skills .tools {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .skills .tools .tool {
@@ -959,7 +967,7 @@ a {
 }
 
 .passions .photo img {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: 100%;
 }
