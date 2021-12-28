@@ -365,10 +365,10 @@ a {
   margin: 0;
   padding: 0;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 50vh;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   z-index: 2;
 }
 
@@ -376,21 +376,17 @@ a {
   margin: 0 0 15px 0;
 }
 
-.contact li:last-child {
-  margin: 0;
-}
-
 .contact li a {
   display: block;
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
+  -webkit-transform: translateX(180px);
+          transform: translateX(180px);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .contact li a .name {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   height: 50px;
   background-color: #66806A;
   color: #fff;
@@ -408,9 +404,9 @@ a {
   background-color: #66806A;
   color: #fff;
   text-align: center;
+  margin-right: -4px;
   line-height: 50px;
-  margin-left: -4px;
-  border-radius: 0 50% 50% 0;
+  border-radius: 50% 0 0 50%;
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -437,7 +433,7 @@ a {
 }
 
 .home .container .wraper {
-  padding: 0 15px;
+  padding: 60px 15px 0 15px;
   width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,14 +450,14 @@ a {
   bottom: -60px;
 }
 
-.home .container .wraper .introduction {
-  width: 50%;
+@media (max-width: 800px) {
+  .home .container .wraper {
+    width: 85%;
+  }
 }
 
-@media (max-width: 800px) {
-  .home .container .wraper .introduction {
-    width: 100%;
-  }
+.home .container .wraper .introduction {
+  width: 50%;
 }
 
 .home .container .wraper .introduction h1 {
@@ -474,18 +470,18 @@ a {
 
 @media screen and (min-width: 320px) {
   .home .container .wraper .introduction h1 {
-    font-size: calc(80px + 70 * ((100vw - 320px) / 1280));
+    font-size: calc(80px + 60 * ((100vw - 320px) / 730));
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1050px) {
   .home .container .wraper .introduction h1 {
-    font-size: 150px;
+    font-size: 140px;
   }
 }
 
 .home .container .wraper .introduction p {
-  font-size: 22px;
+  font-size: 20px;
   padding: 0 0 0 10px;
 }
 
@@ -493,12 +489,6 @@ a {
   display: block;
   width: 35%;
   margin: 0 0 20px 0;
-}
-
-@media (max-width: 800px) {
-  .home .container .wraper .my-photo {
-    width: 50%;
-  }
 }
 
 .hello {
