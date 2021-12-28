@@ -564,8 +564,8 @@ a {
 }
 
 .projects .backgroud {
-  background-color: #D3E4CD;
-  padding: 25px 0;
+  background-color: #efefef;
+  padding: 60px 0;
 }
 
 @media (max-width: 800px) {
@@ -700,12 +700,12 @@ a {
 }
 
 .skills .tools .tool {
-  width: 75px;
-  height: 75px;
+  width: 86px;
+  height: 86px;
   margin: 0 15px 15px 0;
   padding: 25px 0;
   border-radius: 50%;
-  border: 3px solid #66806A;
+  border: 1px solid #66806A;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -724,6 +724,7 @@ a {
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  line-height: 35px;
 }
 
 .experience {

@@ -14,8 +14,8 @@
     }
 
     .backgroud {
-        background-color: #D3E4CD;
-        padding: 25px 0;
+        background-color: #efefef;
+        padding: 60px 0;
 
         @media (max-width: $singleColWidth) {
             padding: 25px 0 0 0;
@@ -34,6 +34,7 @@
 
                     &::before {
                         content: "see on GitHub";
+                        // da się sformatować ten napis wewnątrz? Żeby go zrobić jak przycisk
                         border-radius: 20px;
                         text-align: center;
                         padding-top: 22%;
