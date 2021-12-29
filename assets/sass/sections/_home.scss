@@ -4,10 +4,9 @@
     // position: relative;
 
     .container {
+        padding: 0;
         position: relative;
         height: 100%;
-        display: flex;
-        justify-content: flex-end;
         // position: absolute;
         // bottom: -60px;
         // // jak to obniżyć, żeby flex się nie pieprzył...
@@ -17,27 +16,27 @@
 
         .wraper {
             padding: 60px 15px 0 15px;
-            width: 70%;
             display: flex;
-            flex-wrap: wrap;
             align-items: flex-end;
             justify-content: space-between;
             position: absolute;
             bottom: -60px;
 
             @media (max-width: $singleColWidth) {
-                width: 85%;
+                width: 100%;
+                justify-content: center;
             }
 
             .introduction {
-                width: 50%;
+                width: 71%;
 
-                // @media (max-width: $singleColWidth) {
-                //     width: 100%;
-                // }
+                @media (max-width: $fullWidth) {
+                    width: 100%;
+                }
+
 
                 h1 {
-                    @include fluid-type(320px, $contactSideBar, 80px, 140px);
+                    @include fluid-type(320px, $contactSideBar, 100px, 140px);
                     margin: 0 0 25px 0;
                 }
 
@@ -49,12 +48,12 @@
 
             .my-photo {
                 display: block;
-                width: 35%;
+                width: 25%;
                 margin: 0 0 20px 0;
 
-                // @media (max-width: $singleColWidth) {
-                //     width: 50%;
-                // }
+                @media (max-width: $singleColWidth) {
+                    display: none;
+                }
             }
         }
     }

@@ -74,7 +74,7 @@
                     font-weight: 700;
                     font-size: $markedTextSize;
                     transition: 0.3s;
-                    width: 10%;
+                    width: 5%;
                 }
 
                 .circle {
@@ -87,8 +87,15 @@
                         content: '';
                         width: 36px;
                         height: 36px;
-                        border: 3px solid $headerColor;
+                        border: 1px solid $headerColor;
                         border-radius: 50%;
+
+                        @media (max-width: $phoneWidth) {
+                            width: 30px;
+                            height: 30px;
+                            top: -3px;
+
+                        }
                     }
 
                     &::after {
@@ -101,6 +108,11 @@
                         background-color: transparent;
                         border-radius: 50%;
                         transition: 0.3s;
+
+                        @media (max-width: $phoneWidth) {
+                            width: 14px;
+                            height: 14px;
+                        }
                     }
                 }
 
@@ -112,22 +124,22 @@
                     transition: 0.3s;
 
                     @media (max-width: $phoneWidth) {
-                        margin: 0 0 0 100px;
+                        margin: 0 0 0 90px;
                     }
 
                     &::before {
                         position: absolute;
-                        left: -73px;
+                        left: -72px;
                         top: 35px;
                         content: '';
-                        width: 3px;
+                        width: 1px;
                         height: 100%;
                         background-color: $headerColor;
 
                         @media (max-width: $phoneWidth) {
-                            left: -43px;
-                            height: calc(100% - 17px);
-
+                            left: -35px;
+                            top: 32px;
+                            height: calc(100% - 10px);
                         }
                     }
 

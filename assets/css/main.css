@@ -422,24 +422,16 @@ a {
 }
 
 .home .container {
+  padding: 0;
   position: relative;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .home .container .wraper {
   padding: 60px 15px 0 15px;
-  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -452,12 +444,21 @@ a {
 
 @media (max-width: 800px) {
   .home .container .wraper {
-    width: 85%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .home .container .wraper .introduction {
-  width: 50%;
+  width: 71%;
+}
+
+@media (max-width: 600px) {
+  .home .container .wraper .introduction {
+    width: 100%;
+  }
 }
 
 .home .container .wraper .introduction h1 {
@@ -465,12 +466,12 @@ a {
 }
 
 .home .container .wraper .introduction h1 {
-  font-size: 80px;
+  font-size: 100px;
 }
 
 @media screen and (min-width: 320px) {
   .home .container .wraper .introduction h1 {
-    font-size: calc(80px + 60 * ((100vw - 320px) / 730));
+    font-size: calc(100px + 40 * ((100vw - 320px) / 730));
   }
 }
 
@@ -487,34 +488,65 @@ a {
 
 .home .container .wraper .my-photo {
   display: block;
-  width: 35%;
+  width: 25%;
   margin: 0 0 20px 0;
 }
 
+@media (max-width: 800px) {
+  .home .container .wraper .my-photo {
+    display: none;
+  }
+}
+
 .hello {
-  padding: 200px 0 100px 0;
+  padding: 120px 0 100px 0;
 }
 
 @media (max-width: 1600px) {
   .hello {
-    padding: 80px 0;
+    padding: 100px 0 80px 0;
   }
 }
 
 @media (max-width: 800px) {
   .hello {
-    padding: 60px 0;
+    padding: 80px 0 60px 0;
   }
 }
 
 .hello .container {
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+
+@media (max-width: 800px) {
+  .hello .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.hello .container .drop {
+  display: none;
+  width: 200px;
+  margin: 0 0 60px 0;
+}
+
+@media (max-width: 800px) {
+  .hello .container .drop {
+    display: block;
+  }
 }
 
 .hello .container .description {
@@ -528,20 +560,19 @@ a {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .hello .container .description {
-    max-width: 70%;
+    width: 100%;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .hello .container .description {
-    max-width: 100%;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
-.hello .container .description:last-child {
+.hello .container .description p:last-child {
   margin: 0;
 }
 
@@ -559,12 +590,6 @@ a {
 @media (max-width: 800px) {
   .projects {
     padding: 60px 0;
-  }
-}
-
-@media (max-width: 800px) {
-  .projects {
-    padding: 25px 0 0 0;
   }
 }
 
@@ -820,7 +845,7 @@ a {
   font-size: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  width: 10%;
+  width: 5%;
 }
 
 .experience .container .timeline-wraper .item .circle {
@@ -834,8 +859,16 @@ a {
   content: '';
   width: 36px;
   height: 36px;
-  border: 3px solid #66806A;
+  border: 1px solid #66806A;
   border-radius: 50%;
+}
+
+@media (max-width: 400px) {
+  .experience .container .timeline-wraper .item .circle::before {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+  }
 }
 
 .experience .container .timeline-wraper .item .circle::after {
@@ -851,6 +884,13 @@ a {
   transition: 0.3s;
 }
 
+@media (max-width: 400px) {
+  .experience .container .timeline-wraper .item .circle::after {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .experience .container .timeline-wraper .item .info {
   width: 90%;
   line-height: 1.5;
@@ -862,24 +902,25 @@ a {
 
 @media (max-width: 400px) {
   .experience .container .timeline-wraper .item .info {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 90px;
   }
 }
 
 .experience .container .timeline-wraper .item .info::before {
   position: absolute;
-  left: -73px;
+  left: -72px;
   top: 35px;
   content: '';
-  width: 3px;
+  width: 1px;
   height: 100%;
   background-color: #66806A;
 }
 
 @media (max-width: 400px) {
   .experience .container .timeline-wraper .item .info::before {
-    left: -43px;
-    height: calc(100% - 17px);
+    left: -35px;
+    top: 32px;
+    height: calc(100% - 10px);
   }
 }
 
