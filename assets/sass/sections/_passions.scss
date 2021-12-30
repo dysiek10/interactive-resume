@@ -38,18 +38,14 @@
         }
 
         img {
-            display: inline-block;
+            display: block;
             width: 100%;
             height: 100%;
+            position: relative;
         }
 
-        // co to za kreski...
         .cover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: relative;
             overflow: hidden;
 
             &::after {

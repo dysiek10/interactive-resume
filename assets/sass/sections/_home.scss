@@ -1,26 +1,28 @@
 .home {
-    height: 50vh;
-    background-color: #D3E4CD;
-    // position: relative;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: calc(100% - 70px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        background-color: $coverColor;
+    }
 
     .container {
         padding: 0;
         position: relative;
-        height: 100%;
-        // position: absolute;
-        // bottom: -60px;
-        // // jak to obniżyć, żeby flex się nie pieprzył...
-        // // czemu zmniejsza container powyżej 35%?
-        // left: 50%;
-        // transform: translateX(-50%);
+        min-height: 50vh;
 
         .wraper {
             padding: 60px 15px 0 15px;
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            position: absolute;
-            bottom: -60px;
+
 
             @media (max-width: $singleColWidth) {
                 width: 100%;

@@ -1,6 +1,5 @@
 .hello {
     padding: 120px 0 100px 0;
-    // text-align: center;
 
     @media (max-width: $laptopWidth) {
         padding: 100px 0 80px 0;
@@ -20,7 +19,8 @@
             align-items: center;
         }
 
-        .drop {display: none;
+        .drop {
+            display: none;
             width: 200px;
             margin: 0 0 60px 0;
 
@@ -47,6 +47,7 @@
 
             p {
 
+                // czy to jest dobrze złapane?
                 &:last-child {
                     margin: 0;
                 }
