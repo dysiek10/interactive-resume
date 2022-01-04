@@ -33,6 +33,10 @@
             width: 70%;
             font-size: $markedTextSize;
 
+            @media (max-width: $contactSideBar) {
+                padding-right: 40px;
+            }
+
             @media (max-width: $laptopWidth) {
                 font-size: 18px;
             }
