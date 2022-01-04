@@ -430,18 +430,32 @@ ul {
           justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+  .navigation .container .menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .navigation .container .menu .section {
-  margin: 0 30px 20px 0;
+  margin: 0 40px 20px 0;
 }
 
 @media (max-width: 600px) {
   .navigation .container .menu .section {
-    margin: 0 15px 10px 0;
+    margin: 0 20px 10px;
   }
 }
 
 .navigation .container .menu .section:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 400px) {
+  .navigation .container .menu .section:nth-child(3) {
+    text-align: right;
+  }
 }
 
 .navigation .container .menu .section a {
