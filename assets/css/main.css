@@ -413,6 +413,12 @@ ul {
   z-index: 1;
 }
 
+@media (max-width: 600px) {
+  .navigation {
+    padding: 15px 0 0 0;
+  }
+}
+
 .navigation .container .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,7 +436,7 @@ ul {
 
 @media (max-width: 600px) {
   .navigation .container .menu .section {
-    margin: 0 5px 8px 0;
+    margin: 0 20px 10px 0;
   }
 }
 
