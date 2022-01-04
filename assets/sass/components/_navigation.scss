@@ -1,0 +1,45 @@
+.navigation {
+    background-color: $coverColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0 0 0;
+    z-index: 1;
+
+    .container {
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .section {
+                margin: 0 30px 20px 0;
+
+                @media (max-width: $fullWidth) {
+                    margin: 0 10px 20px 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    color: $mainTextColor;
+                    text-transform: uppercase;
+                    transition: 0.2s;
+
+                    @media (max-width: $fullWidth) {
+                        font-size: $smallNotes;
+                    }
+
+                    &:hover {
+                        color: $headerColor;
+                        border-bottom: 1.5px solid $headerColor;
+                    }
+                }
+            }
+        }
+    }
+}

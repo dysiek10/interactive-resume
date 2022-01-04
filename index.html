@@ -20,44 +20,78 @@
 
 <body>
 
-    <nav>
+    <nav class="navigation">
+
+        <div class="container">
+
+            <ul class="menu">
+                <li class="section" id="section-1">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="section" id="section-2">
+                    <a href="#projects">Works</a>
+                </li>
+                <li class="section" id="section-3">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="section" id="section-4">
+                    <a href="#education">Education</a>
+                </li>
+                <li class="section" id="section-5">
+                    <a href="#experience">Experience</a>
+                </li>
+                <li class="section" id="section-6">
+                    <a href="#passions">Passions</a>
+                </li>
+            </ul>
+
+        </div>
 
     </nav>
 
-    <ul class="contact">
-        <li>
-            <a href="https://www.linkedin.com/in/edyta-wi%C5%9Bniewska-29252a227/" target="_blank" class="li">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-                <span class="name">LinkedIn</span>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/dysiek10?tab=repositories" target="_blank" class="gh">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span class="name">Github</span>
-            </a>
-        </li>
-        <li>
-            <a href="mailto:eedyta.wisniewska@gmail.com" target="_blank" class="em">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-                <span class="name">eedyta.wisniewska@gmail.com</span>
-            </a>
-        </li>
-        <li>
-            <a href="tel:519101213" target="_blank" class="pn">
-                <span class="icon"><i class="fas fa-phone"></i></span>
-                <span class="name">+48 519 101 213</span>
-            </a>
-        </li>
+    <div class="contact">
 
-    </ul>
+        <ul class="data">
+            <li>
+                <a href="https://www.linkedin.com/in/edyta-wi%C5%9Bniewska-29252a227/" target="_blank" class="li">
+                    <span class="icon"><i class="fab fa-linkedin"></i></span>
+                    <span class="name">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/dysiek10?tab=repositories" target="_blank" class="gh">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span class="name">Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:eedyta.wisniewska@gmail.com" target="_blank" class="em">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <span class="name">eedyta.wisniewska@gmail.com</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:519101213" target="_blank" class="pn">
+                    <span class="icon"><i class="fas fa-phone"></i></span>
+                    <span class="name">+48 519 101 213</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
 
     <main>
 
+        <div class="home" id="home">
 
-        <div class="home">
-
-            <img src="assets/img/ivy.png" alt="Ivy-img" class="ivy">
+            <!-- <img src="assets/img/ivy.png" alt="Ivy-img" class="ivy"> -->
 
             <div class="container">
 
@@ -110,12 +144,11 @@
 
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
 
             <div class="container">
 
                 <h2>What I did so far.</h2>
-
 
                 <!-- PROJECT 1 - VOLOS -->
                 <div class="row">
@@ -215,7 +248,7 @@
 
             <!-- SKILLS -->
 
-            <div class="skills">
+            <div class="skills" id="skills">
 
                 <h2>What I have learnt.</h2>
 
@@ -257,10 +290,9 @@
 
         </div>
 
-
         <!-- COURSES -->
 
-        <div class="courses">
+        <div class="courses" id="courses">
 
             <div class="container">
 
@@ -268,19 +300,29 @@
 
                 <h4>Multiple UDEMY courses on HTML, CSS and JS:</h4>
                 <ul>
-                    <li>The Complete 2022 Web Development Bootcamp</li>
-                    <li>Build Responsive Real-World Websites with HTML and CSS</li>
-                    <li>Front-end Web developer MasterClass HTML CSS JavaScript</li>
+                    <li>
+                        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">
+                            The Complete 2022 Web Development Bootcamp</a>
+                    </li>
+                    <li>
+                        <a href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
+                            target="_blank">Build Responsive Real-World Websites with HTML and CSS</a>
+                    </li>
+                    <li>
+                        <a href="https://www.udemy.com/course/learn-html-css-javascript/" target="_blank">
+                            Front-end Web developer MasterClass HTML CSS JavaScript</a>
+                    </li>
 
                     <h4>UDEMY course on PYTHON:</h4>
-                    <li>100 Days of Code: The Complete Python Pro Bootcamp for 2021 (Begginer)</li>
+                    <li>
+                        <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">
+                            100 Days of Code: The Complete Python Pro Bootcamp for 2021 (Begginer)</a>
+                    </li>
                 </ul>
 
             </div>
 
-
         </div>
-
 
         <!-- EXPERIENCE -->
 
@@ -290,65 +332,7 @@
 
                 <div class="timeline-wraper">
 
-                    <div class="timeline">
-
-                        <h3>Experience</h3>
-
-                        <div class="item">
-
-                            <div class="year">2021</div>
-
-                            <span class="circle"></span>
-
-                            <p class="info">
-                                <span class="period">MUI CONCEPT Edyta Wiśniewska</span> <em>2016 - Current</em>
-                                Interior Architect - freelancing
-                            </p>
-
-                        </div>
-
-                        <div class="item">
-
-                            <div class="year">2017</div>
-
-                            <span class="circle"></span>
-
-                            <p class="info">
-                                <span class="period">2017 - 2021 PRESENT PERFECT</span>
-                                Graphic Designer - freelancing
-                            </p>
-
-                        </div>
-
-                        <div class="item">
-
-                            <div class="year">2016</div>
-
-                            <span class="circle"></span>
-
-                            <p class="info">
-                                <span class="period">2016 - 2021 BE DDJM Interiors</span>
-                                Interior Architect - permanent
-                            </p>
-
-                        </div>
-
-                        <div class="item">
-
-                            <div class="year">2013</div>
-
-                            <span class="circle"></span>
-
-                            <p class="info">
-                                <span class="period">2by4 Architects</span> <em>September - December</em>
-                                Intern
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="timeline">
+                    <div class="timeline" id="education">
 
                         <h3>Education</h3>
 
@@ -421,13 +405,71 @@
 
                     </div>
 
+                    <div class="timeline" id="experience">
+
+                        <h3>Experience</h3>
+
+                        <div class="item">
+
+                            <div class="year">2021</div>
+
+                            <span class="circle"></span>
+
+                            <p class="info">
+                                <span class="period">MUI CONCEPT Edyta Wiśniewska</span> <em>2016 - Current</em>
+                                Interior Architect - freelancing
+                            </p>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="year">2017</div>
+
+                            <span class="circle"></span>
+
+                            <p class="info">
+                                <span class="period">2017 - 2021 PRESENT PERFECT</span>
+                                Graphic Designer - freelancing
+                            </p>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="year">2016</div>
+
+                            <span class="circle"></span>
+
+                            <p class="info">
+                                <span class="period">2016 - 2021 BE DDJM Interiors</span>
+                                Interior Architect - permanent
+                            </p>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="year">2013</div>
+
+                            <span class="circle"></span>
+
+                            <p class="info">
+                                <span class="period">2by4 Architects</span> <em>September - December</em>
+                                Intern
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <div class="passions">
+        <div class="passions" id="passions">
 
             <div class="container">
 
@@ -481,26 +523,30 @@
 
     </main>
 
-</body>
 
-<footer>
 
-    <div class="rodo">
+    <footer>
 
-        <div class="container">
+        <div class="rodo">
 
-            <p>
-                Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu
-                rekrutacji zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27
-                kwietnia
-                2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie
-                swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
-            </p>
+            <div class="container">
+
+                <p>
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu
+                    rekrutacji zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27
+                    kwietnia
+                    2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie
+                    swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
+    </footer>
 
-</footer>
+    <script src="assets/js/app.js"></script>
+
+</body>
 
 </html>

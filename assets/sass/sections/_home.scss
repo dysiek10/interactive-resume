@@ -6,6 +6,7 @@
         z-index: 1;
         // width: 300px;
         height: 140%;
+        top: 0;
         left: 0;
         // filter: drop-shadow(25px 10px 6px rgba(0, 0, 0, 0.3));
         filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.3));
@@ -32,22 +33,29 @@
 
     &::before {
         content: '';
-        height: calc(100% - 70px);
+        height: calc(100% - 65px);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         z-index: -1;
         background-color: $coverColor;
+
+        @media (max-width: $singleColWidth) {
+            height: calc(100% - 45px);
+        }
     }
 
     .container {
         padding: 0;
         position: relative;
         min-height: 50vh;
+        display: flex;
+        align-items: flex-end;
 
         .wraper {
             padding: 60px 15px 0 15px;
+            height: 100%;
             display: flex;
             align-items: flex-end;
             justify-content: space-between;

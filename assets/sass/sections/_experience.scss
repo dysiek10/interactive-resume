@@ -17,10 +17,6 @@
             display: flex;
             flex-wrap: wrap;
 
-            @media (max-width: $singleColWidth) {
-                flex-direction: column-reverse;
-            }
-
             .timeline {
 
                 h3 {
