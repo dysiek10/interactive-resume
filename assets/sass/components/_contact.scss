@@ -1,14 +1,14 @@
 .contact {
     position: fixed;
     right: 0;
-    top: calc(50vh - 65px);
-    transform: translateY(-100%);
+    top: calc(50vh);
+    transform: translateY(-50%);
     z-index: 1;
     transition: 0.3s;
     padding: 20px 0;
 
     @media (max-width: $singleColWidth) {
-        top: calc(50vh - 45px);
+        top: calc(50vh);
     }
 
     // &.menu-open {

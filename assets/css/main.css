@@ -430,7 +430,7 @@ ul {
 
 @media (max-width: 600px) {
   .navigation .container .menu .section {
-    margin: 0 10px 20px 0;
+    margin: 0 8px 20px 0;
   }
 }
 
@@ -459,9 +459,9 @@ ul {
 .contact {
   position: fixed;
   right: 0;
-  top: calc(50vh - 65px);
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  top: calc(50vh);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -470,7 +470,7 @@ ul {
 
 @media (max-width: 800px) {
   .contact {
-    top: calc(50vh - 45px);
+    top: calc(50vh);
   }
 }
 
