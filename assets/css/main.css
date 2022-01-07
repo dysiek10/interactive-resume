@@ -273,6 +273,7 @@ html {
   scroll-behavior: smooth;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 
 body {
@@ -369,6 +370,43 @@ ul {
   margin: 0;
 }
 
+.list-item {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+  position: relative;
+  line-height: 1.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.list-item:hover {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  color: #66806A;
+}
+
+.list-item:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #66806A;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.list-item:after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #66806A;
+  position: absolute;
+  left: 3px;
+  top: 7px;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,6 +439,10 @@ ul {
 .link:hover {
   background-color: #66806A;
   color: #fff;
+}
+
+.emphasize {
+  font-weight: 400;
 }
 
 .navigation {
@@ -908,9 +950,22 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 -15px 0 0;
+  padding: 0 0 85px 0;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1600px) {
+  .skills .tools {
+    padding: 0 0 65px 0;
+  }
+}
+
+@media (max-width: 1600px) {
+  .skills .tools {
+    padding: 0 0 45px 0;
+  }
+}
+
+@media (max-width: 800px) {
   .skills .tools {
     padding-right: 40px;
   }
@@ -952,47 +1007,28 @@ ul {
   line-height: 35px;
 }
 
+.skills .row {
+  margin: 0 -15px;
+}
+
 @media (max-width: 1050px) {
-  .courses {
-    padding-right: 40px;
+  .skills .row .courses {
+    padding-right: 55px;
   }
 }
 
-.courses li {
-  margin: 0 0 20px 0;
-  padding: 0 0 0 30px;
-  position: relative;
-  line-height: 1.5;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.skills .row .courses a:visited {
+  color: #99A799;
 }
 
-.courses li:hover {
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
+.skills .row .courses a:hover {
   color: #66806A;
 }
 
-.courses li:before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px solid #66806A;
-  position: absolute;
-  left: 0;
-  top: 4px;
-}
-
-.courses li:after {
-  content: '';
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #66806A;
-  position: absolute;
-  left: 3px;
-  top: 7px;
+@media (max-width: 800px) {
+  .skills .row .languages h3 {
+    margin-top: 40px;
+  }
 }
 
 .experience {

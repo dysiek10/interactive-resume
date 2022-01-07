@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
     font-size: $basicTextSize;
     font-family: $mainFontFamily;
+    font-weight: 100;
 }
 
 body {
@@ -66,6 +67,41 @@ ul {
     margin: 0;
 }
 
+.list-item {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 30px;
+    position: relative;
+    line-height: 1.5;
+    transition: 0.3s;
+
+    &:hover {
+        transform: translateX(30px);
+        color: $headerColor;
+    }
+
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid $headerColor;
+        position: absolute;
+        left: 0;
+        top: 4px;
+    }
+
+    &:after {
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: $headerColor;
+        position: absolute;
+        left: 3px;
+        top: 7px;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -92,4 +128,8 @@ ul {
 .link:hover {
     background-color: $headerColor;
     color: #fff;
+}
+
+.emphasize {
+    font-weight: 400;
 }
