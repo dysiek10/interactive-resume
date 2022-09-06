@@ -1,95 +1,90 @@
 .skills {
-    padding: $sectionPaddingL;
-    padding-bottom: 85px;
+  padding: $sectionPaddingL;
+  padding-bottom: 85px;
+
+  @media (max-width: $laptopWidth) {
+    padding: $sectionPaddingM;
+    padding-bottom: 65px;
+  }
+
+  @media (max-width: $singleColWidth) {
+    padding: $sectionPaddingS;
+    padding-bottom: 45px;
+  }
+
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 0 -15px 0 0;
+    padding: 0 0 85px 0;
 
     @media (max-width: $laptopWidth) {
-        padding: $sectionPaddingM;
-        padding-bottom: 65px;
+      padding: 0 0 65px 0;
+    }
+
+    @media (max-width: $laptopWidth) {
+      padding: 0 0 45px 0;
     }
 
     @media (max-width: $singleColWidth) {
-        padding: $sectionPaddingS;
-        padding-bottom: 45px;
+      padding-right: 40px;
     }
 
-    .tools {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 -15px 0 0;
-        padding: 0 0 85px 0;
+    @media (max-width: 925px) {
+      justify-content: center;
+    }
 
-        @media (max-width: $laptopWidth) {
-            padding: 0 0 65px 0;
+    .tool {
+      width: 86px;
+      height: 86px;
+      margin: 0 15px 15px 0;
+      padding: 25px 0;
+      border-radius: 50%;
+      // background-color: #efefef;
+      border: 1px solid $headerColor;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(120%);
+        background-color: $headerColor;
+
+        .name {
+          color: #fff;
         }
+      }
 
-        @media (max-width: $laptopWidth) {
-            padding: 0 0 45px 0;
-        }
+      .name {
+        text-align: center;
+        transition: 0.5s;
+        line-height: 35px;
+      }
+    }
+  }
 
+  .row {
+    margin: 0 -15px;
+
+    .courses {
+      @media (max-width: $contactSideBar) {
+        padding-right: 55px;
+      }
+
+      a:visited {
+        color: $mainTextColor;
+      }
+
+      a:hover {
+        color: $headerColor;
+      }
+    }
+
+    .languages {
+      h3 {
         @media (max-width: $singleColWidth) {
-            padding-right: 40px;
+          margin-top: 40px;
         }
-
-        @media (max-width: 925px) {
-            justify-content: center;
-        }
-
-        .tool {
-            width: 86px;
-            height: 86px;
-            margin: 0 15px 15px 0;
-            padding: 25px 0;
-            border-radius: 50%;
-            // background-color: #efefef;
-            border: 1px solid $headerColor;
-            transition: 0.5s;
-
-            &:hover {
-                transform: scale(120%);
-                background-color: $headerColor;
-
-                .name {
-                    color: #fff;
-                }
-            }
-
-            .name {
-                text-align: center;
-                transition: 0.5s;
-                line-height: 35px;
-            }
-
-        }
+      }
     }
-
-    .row {
-        margin: 0 -15px;
-
-        .courses {
-
-            @media (max-width: $contactSideBar) {
-                padding-right: 55px;
-            }
-
-            a:visited {
-                color: $mainTextColor;
-            }
-
-            a:hover {
-                color: $headerColor;
-            }
-        }
-
-        .languages {
-
-            h3 {
-
-                @media (max-width: $singleColWidth) {
-                    margin-top: 40px;
-                }
-
-            }
-        }
-    }
+  }
 }
