@@ -386,7 +386,7 @@ ul {
 }
 
 .list-item:before {
-  content: '';
+  content: "";
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -397,7 +397,7 @@ ul {
 }
 
 .list-item:after {
-  content: '';
+  content: "";
   width: 9px;
   height: 9px;
   border-radius: 50%;
