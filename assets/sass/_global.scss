@@ -1,12 +1,13 @@
 html {
   scroll-behavior: smooth;
-  font-size: $basicTextSize;
-  font-family: $mainFontFamily;
-  font-weight: 100;
 }
 
 body {
   color: $mainTextColor;
+
+  font-size: $basicTextSize;
+  font-family: $secondFontFamily;
+  font-weight: 200;
 }
 
 .container {
@@ -24,11 +25,20 @@ h6 {
   color: $headerColor;
   margin: 0;
   line-height: 1;
+  font-family: $mainFontFamily;
+}
+
+h1 {
+  @include fluid-type(360px, $contactSideBar, 90px, 140px);
+
+  font-weight: 600;
+  margin: 0 0 25px 0;
 }
 
 h2 {
-  @include fluid-type(320px, $contactSideBar, 30px, 50px);
-  // font-size: 50px;
+  @include fluid-type(360px, $contactSideBar, 30px, 50px);
+
+  font-weight: 600;
   margin: 0 0 50px 0;
 
   @media (max-width: $singleColWidth) {
@@ -37,8 +47,9 @@ h2 {
 }
 
 h3 {
-  @include fluid-type(320px, $contactSideBar, 20px, 25px);
-  // font-size: 25px;
+  @include fluid-type(360px, $contactSideBar, 20px, 25px);
+
+  font-weight: 600;
   margin: 0 0 25px 0;
 
   @media (max-width: $singleColWidth) {
@@ -48,6 +59,7 @@ h3 {
 
 h4 {
   color: $mainTextColor;
+  font-weight: 500;
   margin: 0 0 20px 0;
 }
 
@@ -123,6 +135,7 @@ ul {
   border-radius: 30px;
   transition: 0.4s;
   font-size: $smallNotes;
+  font-weight: 300;
 }
 
 .link:hover {
@@ -131,5 +144,5 @@ ul {
 }
 
 .emphasize {
-  font-weight: 400;
+  font-weight: 600;
 }

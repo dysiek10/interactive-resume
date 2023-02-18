@@ -1,95 +1,110 @@
 .projects {
-    padding: $sectionPaddingL;
-    background-color: #efefef;
+  padding: $sectionPaddingL;
+  background-color: #efefef;
 
-    @media (max-width: $laptopWidth) {
-        padding: $sectionPaddingM;
-    }
+  @media (max-width: $laptopWidth) {
+    padding: $sectionPaddingM;
+  }
 
-    @media (max-width: $singleColWidth) {
-        padding: $sectionPaddingS;
-    }
+  @media (max-width: $singleColWidth) {
+    padding: $sectionPaddingS;
+  }
 
-    .row {
+  .row {
+    .image {
+      padding: 0;
 
-        .image {
-            padding: 0;
+      a {
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        transition: 0.4s;
+        border-radius: 20px;
 
-            a {
-                display: block;
-                overflow: hidden;
-                position: relative;
-                transition: 0.4s;
-                border-radius: 20px;
-
-                &::before {
-                    content: "see on GitHub";
-                    // da się sformatować ten napis wewnątrz? Żeby go zrobić jak przycisk
-                    border-radius: 20px;
-                    text-align: center;
-                    padding-top: 22%;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $headerColor;
-                    color: #fff;
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    transition: 0.4s;
-                }
-
-                &:hover::before {
-                    left: 0;
-                    border-radius: 20px;
-                }
-            }
-
-            img {
-                display: block;
-                width: 100%;
-                transition: 0.4s;
-                border-radius: 20px;
-                overflow: hidden;
-            }
+        &::before {
+          content: "";
+          border-radius: 20px;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          background-color: $headerColor;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          left: -100%;
+          transition: 0.4s;
         }
 
-        .description {
-            padding: 25px 15px;
-
-            @media (max-width: $contactSideBar) {
-                padding-right: 40px;
-            }
-
-            @media (max-width: $singleColWidth) {
-                padding: 25px 0px;
-                padding-right: 40px;
-            }
+        &::after {
+          content: "see on GitHub";
+          text-align: center;
+          width: 100%;
+          color: #fff;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -100%;
+          transition: 0.4s;
         }
 
-        &.reverse {
-            // czemu nie działa hover z prawej??
-            // jak zlikwidować kwadratowy narożnik?
-
-            @media (max-width: $singleColWidth) {
-                flex-direction: column-reverse;
-            }
-
-            .image {
-
-                a {
-
-                    &::before {
-                        left: auto;
-                        right: -100%;
-                    }
-
-                    &:hover::before {
-                        right: 0;
-                        left: auto;
-                    }
-
-                }
-            }
+        &:hover::before {
+          left: 0;
+          border-radius: 20px;
         }
+
+        &:hover::after {
+          left: 0;
+        }
+      }
+
+      img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+        border-radius: 20px;
+        overflow: hidden;
+      }
     }
+
+    .description {
+      padding: 32px 24px;
+
+      @media (max-width: $contactSideBar) {
+        padding-right: 40px;
+      }
+
+      @media (max-width: $singleColWidth) {
+        padding: 25px 0px;
+        padding-right: 40px;
+      }
+    }
+
+    &.reverse {
+      // czemu nie działa hover z prawej??
+      // jak zlikwidować kwadratowy narożnik?
+
+      @media (max-width: $singleColWidth) {
+        flex-direction: column-reverse;
+      }
+
+      .image {
+        a {
+          &::before,
+          &::after {
+            left: auto;
+            right: -100%;
+          }
+
+          &:hover::before,
+          &:hover::after {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
 }

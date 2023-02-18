@@ -30,18 +30,19 @@
 
       a {
         display: block;
-        transform: translateX(180px);
+        transform: translateX(200px);
         transition: 0.4s;
 
         .name {
           display: inline-block;
-          width: 180px;
+          width: 200px;
           height: 50px;
           background-color: $headerColor;
           color: #fff;
           text-align: center;
           line-height: 52px;
           font-size: $smallNotes;
+          font-weight: 300;
           box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
         }
 

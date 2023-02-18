@@ -1,23 +1,20 @@
 // GLOBAL
 
 $bodyBg: #fff;
-$coverColor: #D3E4CD;
-$mainTextColor: #99A799;
+$coverColor: #d3e4cd;
+$mainTextColor: #99a799;
 $whites: #fff;
-// $dataTextColor: #faefff;
 
-$mainFontFamily: 'Poppins',
-sans-serif;
+$mainFontFamily: "Poppins", sans-serif;
+$secondFontFamily: "Roboto", sans-serif;
 
 $basicTextSize: 15px;
-$markedTextSize: 20px;
+$markedTextSize: 18px;
 $smallNotes: 12px;
 
 $sectionPaddingL: 100px 0;
 $sectionPaddingM: 80px 0;
 $sectionPaddingS: 60px 0;
-
-
 
 // MEDIA QUERIES
 
@@ -26,30 +23,7 @@ $contactSideBar: 1050px;
 $singleColWidth: 800px;
 $fullWidth: 600px;
 $phoneWidth: 400px;
-// $homeColWidth: 1010px;
-// $portfColWidth: 900px;
-// $menuUpWidth: 800px;
-// $menuNumHide: 900px;
-
-
-// // NAVIGATION
-
-// $navBgColor: #362b2E;
-// $navWidth: 380px;
-// $navNumColor: #c6646b;
-// $navTextColor: #fff;
-
 
 // HEADERS
 
-$headerColor: #66806A;
-
-
-// // SECTION HOME
-
-// $homeDataBg: #F9F0FF;
-
-
-// // SECTION SKILLS
-
-// $skillBaseColor: #554247;
+$headerColor: #66806a;
