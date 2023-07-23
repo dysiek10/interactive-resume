@@ -12,7 +12,9 @@
 
   .row {
     .image {
+      height: 240px;
       padding: 0;
+      margin-bottom: 24px;
 
       a {
         display: block;
@@ -37,7 +39,7 @@
         }
 
         &::after {
-          content: "see on GitHub";
+          content: "see more";
           text-align: center;
           width: 100%;
           color: #fff;
@@ -91,6 +93,8 @@
       }
 
       .image {
+        height: 240px;
+
         a {
           &::before,
           &::after {
