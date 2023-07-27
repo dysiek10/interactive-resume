@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 24px 0;
+  border-bottom: 1px solid $whites;
   z-index: 1;
 
   @media (max-width: $fullWidth) {
@@ -25,17 +26,30 @@
       .section {
         a {
           color: $mainTextColor;
-          text-transform: uppercase;
-          font-weight: 300;
-          transition: 0.2s;
+          font-weight: 500;
+
+          overflow: hidden;
+
+          &:after {
+            @include pseudo();
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: currentColor;
+
+            transform: translateX(-101%);
+            transition: transform 0.3s;
+          }
 
           @media (max-width: $fullWidth) {
             font-size: $smallNotes;
           }
 
           &:hover {
-            color: $headerColor;
-            border-bottom: 1.5px solid $headerColor;
+            &::after {
+              transform: translateX(0);
+            }
           }
         }
       }

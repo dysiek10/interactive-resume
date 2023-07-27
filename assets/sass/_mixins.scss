@@ -1,30 +1,274 @@
-@mixin reset-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* ================== */
+/* ~*~    Flex    ~*~ */
+/* ================== */
+//#region Flex
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+//#endregion
 
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
+/* ================== */
+/* ~*~    Font    ~*~ */
+/* ================== */
+//#region Font
+// Font size
+@mixin fontr($min-font, $max-font, $font-weight: 400) {
+  $min-vw: 360;
+  $max-vw: 1920;
+  $min-font-size: $min-font * 1px;
+  $max-font-size: $max-font * 1px;
 
-    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
-        & {
-            font-size: $min-font-size;
+  & {
+    font-size: $min-font-size;
+    font-weight: $font-weight;
 
-            @media screen and (min-width: $min-vw) {
-                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-            }
-
-            @media screen and (min-width: $max-vw) {
-                font-size: $max-font-size;
-            }
-        }
+    @media screen and (min-width: ($min-vw * 1px)) {
+      font-size: calc(
+        #{$min-font-size} + ((#{($min-font - $max-font) * -1} *
+                ((100vw - (#{$min-vw} * 1px))) / #{$max-vw - $min-vw}))
+      );
     }
+
+    @media screen and (min-width: 1920px) {
+      font-size: $max-font-size;
+    }
+  }
 }
+
+// Tracking
+@mixin tracking($target) {
+  letter-spacing: calc(($target / 1000) * 1em);
+}
+//#endregion
+
+/* ================== */
+/* ~*~ Responsive ~*~ */
+/* ================== */
+//#region Responsive
+//Media Query
+@mixin mq($width, $type: min) {
+  $breakpoints: (
+    "bp-360": 360px,
+    // 1-Mobile
+    "bp-375": 375px,
+    // 2-Mobile
+    "bp-414": 414px,
+    // 3-Mobile
+    "bp-768": 768px,
+    // 4-Mobile
+    "bp-576": 576px,
+    // 1-Tablet
+    "bp-800": 800px,
+    // 2-Tablet
+    "bp-992": 992px,
+    // 3-Tablet
+    "bp-1024": 1024px,
+    // 4-Tablet
+    "bp-1366": 1366px,
+    // 1-Desktop
+    "bp-1920": 1920px,
+    // 2-Desktop
+    "bp-1536": 1536px,
+    // 3-Desktop
+    "bp-1440": 1440px,
+    // 4-Desktop
+    "bp-1280": 1280px,
+    // 5-Desktop
+    "bp-2560": 2560px,
+  );
+
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Calculate spacing
+@function calcSpacing($min, $max, $min-vw: 360, $max-vw: 1920) {
+  @return calc(
+    #{$min}px + (#{$max} - #{$min}) *
+      ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw}))
+  );
+}
+
+// Padding
+@mixin padding($min, $max, $type, $important: "") {
+  $min-vw: 360;
+  $max-vw: 1920;
+
+  @if $type == "all" {
+    & {
+      padding: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        padding: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        padding: #{$max}px #{$important};
+      }
+    }
+  } @else if $type == "vertical" {
+    & {
+      padding-top: #{$min}px #{$important};
+      padding-bottom: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        padding-top: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+        padding-bottom: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        padding-top: #{$max}px #{$important};
+        padding-bottom: #{$max}px #{$important};
+      }
+    }
+  } @else if $type == "horizontal" {
+    & {
+      padding-left: #{$min}px #{$important};
+      padding-right: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        padding-left: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+        padding-right: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        padding-left: #{$max}px #{$important};
+        padding-right: #{$max}px #{$important};
+      }
+    }
+  } @else {
+    & {
+      padding-#{$type}: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        padding-#{$type}: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        padding-#{$type}: #{$max}px #{$important};
+      }
+    }
+  }
+}
+
+// Margin
+@mixin margin($min, $max, $type, $important: "") {
+  $min-vw: 360;
+  $max-vw: 1920;
+
+  @if $type == "all" {
+    & {
+      margin: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        margin: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        margin: #{$max}px #{$important};
+      }
+    }
+  } @else if $type == "vertical" {
+    & {
+      margin-top: #{$min}px #{$important};
+      margin-bottom: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        margin-top: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+        margin-bottom: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        margin-top: #{$max}px #{$important};
+        margin-bottom: #{$max}px #{$important};
+      }
+    }
+  } @else if $type == "horizontal" {
+    & {
+      margin-left: #{$min}px #{$important};
+      margin-right: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        margin-left: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+        margin-right: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        margin-left: #{$max}px #{$important};
+        margin-right: #{$max}px #{$important};
+      }
+    }
+  } @else {
+    & {
+      margin-#{$type}: #{$min}px #{$important};
+
+      @media screen and (min-width: #{$min-vw}px) {
+        margin-#{$type}: calcSpacing($min, $max, $min-vw, $max-vw) #{$important};
+      }
+
+      @media screen and (min-width: #{$max-vw}px) {
+        margin-#{$type}: #{$max}px #{$important};
+      }
+    }
+  }
+}
+//#endregion
+
+/* ================== */
+/* ~*~   Other    ~*~ */
+/* ================== */
+//#region Other
+
+// Center
+@mixin center($position: "both") {
+  @if $position == "vertical" {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Pseudo
+@mixin pseudo($pos: absolute, $content: "") {
+  content: $content;
+  position: $pos;
+}
+
+// Overlay
+@mixin overlay($bg-color, $alpha) {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: hsla(var($bg-color), $alpha);
+}
+
+//#endregion

@@ -1,13 +1,62 @@
 @import "variables";
 @import "mixins";
-@import "normalize";
+@import "reset";
 @import "global";
-@import "components/_navigation.scss";
-@import "components/_contact.scss";
-@import "sections/_home.scss";
-@import "sections/_hello.scss";
-@import "sections/_projects.scss";
-@import "sections/_skills.scss";
-@import "sections/_experience.scss";
-@import "sections/_passions.scss";
-@import "sections/_rodo.scss";
+
+@import "./components/navigation";
+@import "./components/contact";
+
+@import "./sections/home";
+@import "./sections/hello";
+@import "./sections/projects";
+@import "./sections/skills";
+@import "./sections/experience";
+@import "./sections/passions";
+@import "./sections/rodo";
+
+// /* ================== */
+// /* ~*~   CONFIG   ~*~ */
+// /* ================== */
+// @import './base/reset';
+// @import './base/mixins';
+// // @import './base/grid';
+
+// /* =============== */
+// /* ~*~   NPM   ~*~ */
+// /* =============== */
+// // @import '~swiper/css/bundle';
+// @import '~swiper/css';
+// // @import '~aos/dist/aos.css';
+// // @import '~slim-select/dist/slimselect.min.css';
+// // @import '~simple-lightbox/dist/simpleLightbox.min.css';
+// @import '~mapbox-gl/dist/mapbox-gl.css';
+
+// /* ================== */
+// /* ~*~   GLOBAL   ~*~ */
+// /* ================== */
+// @import './global/variables';
+// @import './global/containers';
+// @import './global/keyframes';
+// @import './global/spacings';
+// @import './global/global';
+// @import './global/font-face';
+
+// /* ====================== */
+// /* ~*~   COMPONENTS   ~*~ */
+// /* ====================== */
+// @import './components/texts';
+// @import './components/buttons';
+// @import './components/icons';
+// @import './components/dash';
+
+// /* ================== */
+// /* ~*~   SHARED   ~*~ */
+// /* ================== */
+// @import './shared/nav';
+// @import './shared/footer';
+// @import './shared/cookies';
+
+// /* ================= */
+// /* ~*~   PAGES   ~*~ */
+// /* ================= */
+// @import './pages/404';
